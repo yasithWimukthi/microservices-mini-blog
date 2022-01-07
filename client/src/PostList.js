@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import CommentCreate from "../../../../Downloads/Microservices with Node JS and React/[TutsNode.com] - Microservices with Node JS and React/2. A Mini-Microservices App/52-event-syncing/blog/client/src/CommentCreate";
-import CommentList from "../../../../Downloads/Microservices with Node JS and React/[TutsNode.com] - Microservices with Node JS and React/2. A Mini-Microservices App/52-event-syncing/blog/client/src/CommentList";
+import CommentCreate from "./CommentCreate";
+import CommentList from "./CommentList";
 
 const PostList = () => {
   const [posts, setPosts] = useState({});
 
   const fetchPosts = async () => {
-    const res = await axios.get("http://localhost:4002/posts");
+    const res = await axios.get("http://posts.com/posts");
+
     setPosts(res.data);
   };
 
@@ -37,5 +38,4 @@ const PostList = () => {
     </div>
   );
 };
-
 export default PostList;
