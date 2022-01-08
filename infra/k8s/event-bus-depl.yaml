@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: event-bus
-          image: yasith/event-bus-85
+          image: yasith/event-bus
 ---
 apiVersion: v1
 kind: Service
